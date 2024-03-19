@@ -21,7 +21,7 @@ function App() {
             </div>
 
             <div class=" flex items-center w-auto   mt-0 bg-transparent text-black  p-0 z-20" id="nav-content">
-              <ul class="list-reset lg:flex justify-end flex-1 items-center">
+              <ul class="list-reset lg:flex justify-end flex-1 items-center hidden xs:visible">
                 <a href="#" class="text-gray-300 hover:bg-red-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Home</a>
                 <a href="#" class="text-gray-300 hover:bg-red-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Services</a>
                 <a href="#" class="text-gray-300 hover:bg-red-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium">Projects</a>
@@ -40,7 +40,7 @@ function App() {
           <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
         </nav>
 
-        <div class="pt-24">
+        <div class="pt-24 ">
           <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 
             <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
@@ -362,7 +362,7 @@ function App() {
         </div>
         <div class="bg-red-900">
             <div class="container px-5 py-4 mx-auto">
-                <p class="text-sm text-black capitalize xl:text-center">© 2024 All rights reserved </p>
+                <p class="text-sm text-black capitalize text-center">© 2024 All rights reserved </p>
             </div>
         </div>
     </footer>
