@@ -9,8 +9,8 @@ const NavBar = () => {
         <div>
             <nav id="header" class="fixed w-full z-30 top-0 backdrop-blur-lg text-white">
             <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-5">
-                <div class="pl-4 flex items-center">
-                    <a class="toggleColour text-white inline-flex no-underline hover:no-underline font-bold text-4xl z-50" href="#">
+                <div class="pl-4 flex ">
+                    <a class="toggleColour items-center text-white inline-flex no-underline hover:no-underline font-bold text-3xl lg:text-4xl z-50" href="#">
                         <img width="60x" class="z-50" src={logo}></img>
                         SpicyHarissa
                     </a>
