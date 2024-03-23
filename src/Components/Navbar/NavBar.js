@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useState}  from 'react'
 import logo from "./../../Images/hrissa.png";
 import {Link} from 'react-scroll';
+import {FaBars,FaTimes} from 'react-icons/fa';
 const NavBar = () => {
+    const [nav, setNav]=useState(false)
+    const handleclick=()=>setNav(!nav)
     return (
         <div>
             <nav id="header" class="fixed w-full z-30 top-0 backdrop-blur-lg text-white">
             <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-5">
                 <div class="pl-4 flex items-center">
-                    <a class="toggleColour text-white inline-flex no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                    <a class="toggleColour text-white inline-flex no-underline hover:no-underline font-bold text-4xl z-50" href="#">
                         <img width="60x" class="z-50" src={logo}></img>
                         SpicyHarissa
                     </a>
@@ -27,6 +30,16 @@ const NavBar = () => {
                            <Link to="contactus" smooth={true} duration={500}>Contact Us</Link> 
                         </button>
                     </ul>
+                    <div onClick={handleclick} className='md:hidden z-10 hover:cursor-pointer' style={{width:'50px'}}>
+        {!nav ? <FaBars size={30}/>:<FaTimes size={30}/>}
+      </div>
+      <ul className={!nav ? 'hidden':'absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-red-400 to-red-500 flex flex-col justify-center items-center'}>
+        <li className='py-5 text-4xl hover: cursor-pointer'><Link onClick={handleclick} to="home" smooth={true} duration={500}>Home</Link></li>
+        <li className='py-5 text-4xl hover: cursor-pointer'><Link onClick={handleclick} to="aboutus" smooth={true} duration={500}>About Us</Link></li>
+        <li className='py-5 text-4xl hover: cursor-pointer'><Link onClick={handleclick} to="services" smooth={true} duration={500}>Services</Link></li>
+        <li className='py-5 text-4xl hover: cursor-pointer'><Link onClick={handleclick} to="team" smooth={true} duration={500}>Our Team</Link></li>
+        <li className='py-5 text-4xl hover: cursor-pointer'><Link onClick={handleclick} to="contactus" smooth={true} duration={500}>Contact Us</Link></li>
+      </ul>
 
                 </div>
             </div>
